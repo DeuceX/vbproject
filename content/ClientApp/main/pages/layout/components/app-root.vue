@@ -1,5 +1,5 @@
 <template>
-    <div id="app" class="container-fluid">
+    <div id="app" class="container">
         <div class="row">
             <div class="col-sm-3">
                 <nav-menu params="route: route"></nav-menu>
