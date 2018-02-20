@@ -8,13 +8,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">ASP.NET Core with Vue.js 2</a>
+                <a class="navbar-brand" href="/">Card App</a>
             </div>
             <div class="clearfix"></div>
             <transition name="slide">
                 <div class="navbar-collapse collapse in" v-show="!collapsed">
                     <ul class="nav navbar-nav">
-                        <li v-for="route in routes">
+                        <li v-for="route in routes" v-if="route.display">
                             <!-- TODO: highlight active link -->
                             <router-link :to="route.path">
                                 <span :class="route.style"></span> {{ route.display }}

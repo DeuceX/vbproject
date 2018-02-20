@@ -6,7 +6,9 @@
                 <div class="col-md-4" v-for="card in cards">
                     <h3>{{ card.name }}</h3>
                     <h4>{{ card.description }}</h4>
-                    <img :src="card.imageUrl" alt="card photo" />
+                    <router-link :to="'/card-details/' + card.id">
+                        <img :src="card.imageUrl" alt="card photo" />
+                    </router-link>
                 </div>
             </div>
         </div>
