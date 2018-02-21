@@ -1,21 +1,19 @@
 <template>
-    <div class="home">
+    <div class="cards">
         <h1>Hello!</h1>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4" v-for="card in cards">
-                    <h3>{{ card.name }}</h3>
-                    <h4>{{ card.description }}</h4>
-                    <router-link :to="'/card-details/' + card.id">
-                        <div class="img-wrap">
-                            <img :src="card.imageUrl" alt="card photo" />
-                            <div v-if="card.isCompleted" class="completed">
-                                This Card is Completed!
-                            </div>
-                        </div>
-                    </router-link>
-                </div>
-            </div>
+        <div class="cards__items align">
+          <div class="cards__item" v-for="(card, index) in cards" :key="index">
+              <h3>{{ card.name }}</h3>
+              <h4>{{ card.description }}</h4>
+              <router-link :to="'/card-details/' + card.id">
+                  <div class="img-wrap">
+                      <img :src="card.imageUrl" alt="card photo" />
+                      <div v-if="card.isCompleted" class="completed">
+                          This Card is Completed!
+                      </div>
+                  </div>
+              </router-link>
+          </div>
         </div>
     </div>
 </template>
