@@ -1,9 +1,9 @@
 <template>
     <div class="cards align">
       <h1>Hello!</h1>
-      <div class="cards__items wrp">
+      <div class="cards__items flex-row">
         <div 
-          class="cards__item itm" 
+          class="cards__item" 
           v-for="(card, index) in cards" 
           :key="index" 
           :class="card.isCompleted ? 'cards__done' : ''">
@@ -11,7 +11,7 @@
           <h4>{{ card.description }}</h4>
           <router-link :to="'/card-details/' + card.id">
             <div class="cards__img">
-                <img :src="card.imageUrl" alt="card photo" />
+              <img :src="'/ClientApp/main/assets/data/card.png'" alt="card photo" width="280" height="200" />
             </div>
           </router-link>
         </div>
@@ -19,47 +19,19 @@
     </div>
 </template>
 <script>
-    export default {
-        data() {
-            return {
-                cards: null
-            }
-        },
-        async created() {
-            try {
-                let response = await this.$http.get('/api/Card/GetAll');
-                this.cards = response.data;
-            } catch (error) {
-                console.log(error)
-            }
-        }
-    }
+  export default {
+      data() {
+          return {
+              cards: null
+          }
+      },
+      async created() {
+          try {
+              let response = await this.$http.get('/api/Card/GetAll');
+              this.cards = response.data;
+          } catch (error) {
+              console.log(error)
+          }
+      }
+  }
 </script>
-<style>
-    .home img {
-        width: 200px;
-        cursor: pointer;
-        min-height: 300px;
-    }
-
-    .img-wrap {
-        position: relative;
-        display: inline-block;
-    }
-
-        .img-wrap .completed {
-            position: absolute;
-            width: 100%;
-            height: 50%;
-            background: rgba(48, 82, 5, 0.80);
-            left: 0;
-            top: 50%;
-            border-radius: 15px;
-            text-align: center;
-            padding-top: 25%;
-            font-size: 24px;
-            font-weight: 600;
-            font-style: italic;
-            color: aquamarine;
-        }
-</style>

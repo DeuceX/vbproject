@@ -1,4 +1,15 @@
 .cards {
+  &__items {
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: 23.5%;
+    margin-right: 2%;
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+    // @include response()
+  }
   &__done {
     opacity: .5;
   }

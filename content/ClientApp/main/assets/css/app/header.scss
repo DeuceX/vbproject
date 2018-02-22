@@ -1,0 +1,84 @@
+.header {
+  padding: 10px 0;
+  position: relative;
+  &__wrap {
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo {
+    position: relative;
+    display: block;
+    font-family: $logo-font;
+    color: $main;
+    font-size: 62px;
+    line-height: 1;
+    text-decoration: none;
+    @include hover() {
+      text-decoration: none;
+      animation: logohover 1.2s linear;
+      backface-visibility: visible !important;
+    }
+  }
+  &__nav {
+  }
+  &__list {
+    @extend %clear-list;
+    li {
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &__link {
+    display: block;
+    line-height: 0;
+    padding: 0 5px;
+    svg {
+      fill: $main;
+      width: 30px;
+      height: 30px;
+    }
+    @include hover() {
+      svg {
+        animation: navhover 1.2s linear;
+        backface-visibility: visible !important;
+        fill: $main-hover;
+      }
+    }
+  }
+}
+@keyframes logohover {
+  from {
+    transform: perspective(400px);
+  }
+  20% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 0deg);
+  }
+  40% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+  }
+  60% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 180deg);
+  }
+  80% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 270deg);
+  }
+  to {
+    transform: perspective(400px) rotate3d(0, 1, 0, 360deg);
+  }
+}
+@keyframes navhover {
+  from {
+    transform: perspective(400px);
+  }
+  20% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 0deg);
+  }
+  40% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+  }
+  to {
+    transform: perspective(400px) rotate3d(0, 1, 0, 360deg);
+  }
+}
