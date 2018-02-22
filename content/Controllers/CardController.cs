@@ -1,12 +1,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using BLL.Services.Interfaces;
 
 namespace Web.Controllers
 {
     [Route("api/[controller]")]
     public class CardController : Controller
     {
+        private ICardService cardService;
+
         private List<Card> cards = new List<Card>
         {
             new Card("Name 1", "Description 1", 1, false, ""),
@@ -15,9 +18,15 @@ namespace Web.Controllers
             new Card("Name 4", "Description 4", 4, false, "", "http://d12h0em1d7ppg.cloudfront.net/content/fcards/1487150281.jpg")
         };
 
+        public CardController(ICardService cardService)
+        {
+            this.cardService = cardService;
+        }
+
         [HttpGet("[action]")]
         public IEnumerable<Card> GetAll()
         {
+            var testCards = cardService.GetAll();
             return cards;
         }
 

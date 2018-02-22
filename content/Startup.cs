@@ -1,3 +1,5 @@
+using BLL.Services;
+using BLL.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.Webpack;
@@ -25,6 +27,7 @@ namespace Vue2Spa
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
+            services.AddSingleton<ICardService, CardService>();
             services.AddMvc();
         }
 
