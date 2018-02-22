@@ -1,10 +1,10 @@
 <template>
-    <div id="app">
-        <div class="wrapper">
-          <my-header></my-header>
-          <router-view></router-view>
-        </div>
+  <div id="app">
+    <div class="wrapper">
+      <my-header></my-header>
+      <router-view></router-view>
     </div>
+  </div>
 </template>
 <script>
   import Vue from 'vue'

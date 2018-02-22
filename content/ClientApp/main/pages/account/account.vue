@@ -1,6 +1,6 @@
 <template>
   <div class="cards">
-    <!-- <account-info></account-info> -->
+    <account-info></account-info>
     <div class="cards__items flex-row align">
       <div 
         class="cards__item" 
@@ -19,14 +19,16 @@
   </div>
 </template>
 <script>
-  // import AccountInfo from 'components/account-info'
-  // Vue.component('account-info', AccountInfo);
+  import AccountInfo from './components/account-info';
 
   export default {
     data() {
       return {
           cards: null
       }
+    },
+    components: {
+      accountInfo: AccountInfo
     },
     async created() {
       try {
