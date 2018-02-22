@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BLL.DTO
+namespace BLL.Dto
 {
-    public class CardSetDTO
+    public class CardSetDto
     {
         public int Id { get; set; }
         public string Name { get; set; }

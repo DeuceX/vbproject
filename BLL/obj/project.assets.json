@@ -438,19 +438,6 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Ninject/3.3.4": {
-        "type": "package",
-        "dependencies": {
-          "System.Reflection.Emit.ILGeneration": "4.3.0",
-          "System.Reflection.Emit.Lightweight": "4.3.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Ninject.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Ninject.dll": {}
-        }
-      },
       "Remotion.Linq/2.1.1": {
         "type": "package",
         "dependencies": {
@@ -917,7 +904,7 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.0/System.Reflection.Emit.Lightweight.dll": {}
+          "ref/netstandard1.0/_._": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Reflection.Emit.Lightweight.dll": {}
@@ -1923,19 +1910,6 @@
         "lib/netstandard1.0/_._",
         "netstandard.library.2.0.0.nupkg.sha512",
         "netstandard.library.nuspec"
-      ]
-    },
-    "Ninject/3.3.4": {
-      "sha512": "CmbWW97FfJuh4LEOVZM/spqXl4KAulRUjqeMwRd5J9rDMQArmIYaDMU3pyzXXHT062tbF0OPIMwI7tSOtprPfg==",
-      "type": "package",
-      "path": "ninject/3.3.4",
-      "files": [
-        "lib/net45/Ninject.dll",
-        "lib/net45/Ninject.xml",
-        "lib/netstandard2.0/Ninject.dll",
-        "lib/netstandard2.0/Ninject.xml",
-        "ninject.3.3.4.nupkg.sha512",
-        "ninject.nuspec"
       ]
     },
     "Remotion.Linq/2.1.1": {
@@ -4480,8 +4454,7 @@
     ".NETCoreApp,Version=v2.0": [
       "AutoMapper >= 6.2.2",
       "DAL >= 1.0.0",
-      "Microsoft.NETCore.App >= 2.0.0",
-      "Ninject >= 3.3.4"
+      "Microsoft.NETCore.App >= 2.0.0"
     ]
   },
   "packageFolders": {
@@ -4541,10 +4514,6 @@
           "AutoMapper": {
             "target": "Package",
             "version": "6.2.2"
-          },
-          "Ninject": {
-            "target": "Package",
-            "version": "3.3.4"
           }
         },
         "imports": [

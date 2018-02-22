@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using DAL.Entities;
+﻿using DAL.Entities;
 using DAL.Entities.Map;
 using Microsoft.EntityFrameworkCore;
 
-namespace DAL.EF
+namespace DAL.Context
 {
     public class ApplicationContext : DbContext
     {
