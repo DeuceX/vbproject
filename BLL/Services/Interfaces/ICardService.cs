@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using BLL.DTO;
+using BLL.Dto;
 using DAL.Entities;
 
 namespace BLL.Services.Interfaces

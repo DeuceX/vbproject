@@ -1,7 +1,6 @@
 using BLL.Services;
 using BLL.Services.Interfaces;
-using DAL.EF;
-using DAL.Interfaces;
+using DAL.Context;
 using DAL.Repositories;
 using DAL.Repositories.Interfaces;
 using Microsoft.AspNetCore.Builder;
@@ -34,8 +33,6 @@ namespace Vue2Spa
             // Add framework services.
             services.AddMvc();
             services.AddScoped<ICardService, CardService>();
-            services.AddScoped<ICardRepository, CardRepository>();
-            services.AddScoped<ICardSetRepository, CardSetRepository>();
             services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(@"Data Source=.;Initial Catalog=try.db;Trusted_Connection=True;"));
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
         }

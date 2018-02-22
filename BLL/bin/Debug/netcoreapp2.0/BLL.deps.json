@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "00eb4d9f62e6eb8f289a98de6dee53abaeb7a424"
+    "signature": "95234848c566c49302e2576bc7d5008119140182"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,8 +9,7 @@
       "BLL/1.0.0": {
         "dependencies": {
           "AutoMapper": "6.2.2",
-          "DAL": "1.0.0",
-          "Ninject": "3.3.4"
+          "DAL": "1.0.0"
         },
         "runtime": {
           "BLL.dll": {}
@@ -167,15 +166,6 @@
             "rid": "win",
             "assetType": "runtime"
           }
-        }
-      },
-      "Ninject/3.3.4": {
-        "dependencies": {
-          "System.Reflection.Emit.ILGeneration": "4.3.0",
-          "System.Reflection.Emit.Lightweight": "4.3.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Ninject.dll": {}
         }
       },
       "Remotion.Linq/2.1.1": {
@@ -742,13 +732,6 @@
       "sha512": "sha512-dA36TlNVn/XfrZtmf0fiI/z1nd3Wfp2QVzTdj26pqgP9LFWq0i1hYEUAW50xUjGFYn1+/cP3KGuxT2Yn1OUNBQ==",
       "path": "microsoft.win32.registry/4.4.0",
       "hashPath": "microsoft.win32.registry.4.4.0.nupkg.sha512"
-    },
-    "Ninject/3.3.4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-CmbWW97FfJuh4LEOVZM/spqXl4KAulRUjqeMwRd5J9rDMQArmIYaDMU3pyzXXHT062tbF0OPIMwI7tSOtprPfg==",
-      "path": "ninject/3.3.4",
-      "hashPath": "ninject.3.3.4.nupkg.sha512"
     },
     "Remotion.Linq/2.1.1": {
       "type": "package",

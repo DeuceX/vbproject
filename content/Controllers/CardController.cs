@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
-using BLL.DTO;
+using BLL.Dto;
 using Microsoft.AspNetCore.Mvc;
 using BLL.Services.Interfaces;
 using DAL.Entities;
