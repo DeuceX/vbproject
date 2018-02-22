@@ -30,6 +30,13 @@ svg {
   position: relative;
   overflow: hidden;
 }
+.header,
+.footer {
+  width: 100%;
+}
+.footer {
+  align-self: flex-end;
+}
 .align {
   width: 100%;
   padding: 0 15px;
@@ -40,6 +47,12 @@ svg {
   }
 }
 .flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+#app {
+  min-height: 100vh;
   display: flex;
   flex-direction: row;
 }

@@ -10,8 +10,10 @@
   import Vue from 'vue'
   import HomePage from './home-page'
   import header from './header'
+  import AccountPage from 'C:/www/cases/vbproject/content/ClientApp/main/pages/account/account.vue'
 
   Vue.component('home-page', HomePage);
+  Vue.component('account', AccountPage);  
   Vue.component('my-header', header);
 
   export default {

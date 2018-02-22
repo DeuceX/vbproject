@@ -11,12 +11,11 @@
     font-family: $logo-font;
     color: $main;
     font-size: 62px;
-    line-height: 1;
+    line-height: 1.5;
     text-decoration: none;
     @include hover() {
-      text-decoration: none;
-      animation: logohover 1.2s linear;
-      backface-visibility: visible !important;
+      color: $main-hover;
+      transition: color .3s;
     }
   }
   &__nav {
@@ -41,44 +40,8 @@
     }
     @include hover() {
       svg {
-        animation: navhover 1.2s linear;
-        backface-visibility: visible !important;
         fill: $main-hover;
       }
     }
-  }
-}
-@keyframes logohover {
-  from {
-    transform: perspective(400px);
-  }
-  20% {
-    transform: perspective(400px) rotate3d(0, 1, 0, 0deg);
-  }
-  40% {
-    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-  }
-  60% {
-    transform: perspective(400px) rotate3d(0, 1, 0, 180deg);
-  }
-  80% {
-    transform: perspective(400px) rotate3d(0, 1, 0, 270deg);
-  }
-  to {
-    transform: perspective(400px) rotate3d(0, 1, 0, 360deg);
-  }
-}
-@keyframes navhover {
-  from {
-    transform: perspective(400px);
-  }
-  20% {
-    transform: perspective(400px) rotate3d(0, 1, 0, 0deg);
-  }
-  40% {
-    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-  }
-  to {
-    transform: perspective(400px) rotate3d(0, 1, 0, 360deg);
   }
 }

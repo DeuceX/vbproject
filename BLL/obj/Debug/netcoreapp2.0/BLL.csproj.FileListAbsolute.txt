@@ -9,3 +9,5 @@ C:\deals\BLL\bin\Debug\netcoreapp2.0\BLL.pdb
 C:\deals\BLL\bin\Debug\netcoreapp2.0\DAL.pdb
 C:\deals\BLL\obj\Debug\netcoreapp2.0\BLL.dll
 C:\deals\BLL\obj\Debug\netcoreapp2.0\BLL.pdb
+C:\www\cases\vbproject\BLL\obj\Debug\netcoreapp2.0\BLL.dll
+C:\www\cases\vbproject\BLL\obj\Debug\netcoreapp2.0\BLL.pdb

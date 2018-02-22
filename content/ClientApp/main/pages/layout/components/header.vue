@@ -7,7 +7,7 @@
       <nav class="header__nav">
         <ul class="header__list flex-row">
           <li>
-            <router-link :to="'/'" class="header__link">
+            <router-link :to="'/account'" class="header__link">
               <svg 
                 version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 299.997 299.997" style="enable-background:new 0 0 299.997 299.997;" xml:space="preserve">
