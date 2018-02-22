@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Open+Sans+Condensed:300,700&subset=cyrillic');
+
+body {
+  height: 100%;
+  font-family: sans-serif;
+}
+* {
+  box-sizing: border-box;
+  &::after,
+  &::before {
+    box-sizing: border-box;
+  }
+}
+.wrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.align {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  @include response-min(1200px) {
+    max-width: 1170px;
+    padding: 0;
+  }
+}
+.wrp {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.itm {
+  width: 23.5%;
+  margin-right: 2%;
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+  // @include response()
+}
