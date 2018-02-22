@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Open+Sans+Condensed:300,700&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Mr+Bedfort');
 
 body {
   height: 100%;
@@ -9,6 +10,19 @@ body {
   &::after,
   &::before {
     box-sizing: border-box;
+  }
+}
+a,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+  color: inherit;
+}
+svg {
+  transition: fill .3s;
+  @include hover() {
+    transition: fill .3s;
   }
 }
 .wrapper {
@@ -25,16 +39,7 @@ body {
     padding: 0;
   }
 }
-.wrp {
+.flex-row {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-}
-.itm {
-  width: 23.5%;
-  margin-right: 2%;
-  &:nth-child(4n) {
-    margin-right: 0;
-  }
-  // @include response()
 }

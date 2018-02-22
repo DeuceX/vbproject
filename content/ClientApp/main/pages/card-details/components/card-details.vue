@@ -51,29 +51,3 @@
         }
     }
 </script>
-<style scoped>
-    .img-wrap {
-        position: relative;
-        display: inline-block;
-    }
-
-        .img-wrap img {
-            height: 500px;
-        }
-
-        .img-wrap .completed {
-            position: absolute;
-            width: 100%;
-            height: 50%;
-            background: rgba(48, 82, 5, 0.80);
-            left: 0;
-            top: 50%;
-            border-radius: 15px;
-            text-align: center;
-            padding-top: 25%;
-            font-size: 24px;
-            font-weight: 600;
-            font-style: italic;
-            color: aquamarine;
-        }
-</style>
