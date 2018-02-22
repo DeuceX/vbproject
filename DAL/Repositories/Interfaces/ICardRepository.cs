@@ -3,7 +3,7 @@ using DAL.Interfaces;
 
 namespace DAL.Repositories.Interfaces
 {
-    interface ICardRepository : IRepository<Card>
+    public interface ICardRepository : IRepository<Card>
     {
     }
 }

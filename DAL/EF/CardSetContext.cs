@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Text;
+﻿using Microsoft.EntityFrameworkCore;
 using DAL.Entities;
 
 namespace DAL.EF
@@ -12,16 +9,15 @@ namespace DAL.EF
 
         static CardSetContext()
         {
-            Database.SetInitializer<CardSetContext>(new StoreDbInitializer());
         }
         public CardSetContext(string connectionString)
-            : base(connectionString)
+            : base()
         {
         }
 
-        public class StoreDbInitializer : DropCreateDatabaseIfModelChanges<CardSetContext>
+        public class StoreDbInitializer
         {
-            protected override void Seed(CardSetContext db)
+            protected void Seed(CardSetContext db)
             {
                 db.CardSets.Add(new CardSet { Id = 1, Name = "Card Set 1", Price = 100 });
                 db.CardSets.Add(new CardSet { Id = 2, Name = "Card Set 2", Price = 250 });

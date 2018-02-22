@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using DAL.EF;
 using DAL.Entities;
 using DAL.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace DAL.Repositories
 {
-    class CardSetRepository : ICardSetRepository
+    public class CardSetRepository : ICardSetRepository
     {
         private readonly CardSetContext _context;
 
@@ -19,7 +19,13 @@ namespace DAL.Repositories
 
         public IEnumerable<CardSet> GetAll()
         {
-            return _context.CardSets;
+            return _context.CardSets.ToList();
+        }
+
+        public void Insert(CardSet entity)
+        {
+            _context.CardSets.Add(entity);
+            _context.SaveChanges();
         }
 
         public CardSet Get(int id)
@@ -35,18 +41,28 @@ namespace DAL.Repositories
         public void Create(CardSet cardSet)
         {
             _context.CardSets.Add(cardSet);
+            _context.SaveChanges();
         }
 
         public void Update(CardSet cardSet)
         {
             _context.Entry(cardSet).State = EntityState.Modified;
+            _context.SaveChanges();
         }
 
-        public void Delete(int id)
+        public void Delete(CardSet entity)
         {
-            CardSet cardSet = _context.CardSets.FirstOrDefault(cs => cs.Id == id);
-            if (cardSet != null)
-                _context.CardSets.Remove(cardSet);
+            _context.CardSets.Remove(entity);
+        }
+
+        public void Remove(CardSet entity)
+        {
+            _context.CardSets.Remove(entity);
+        }
+
+        public void SaveChanges()
+        {
+            _context.SaveChanges();
         }
     }
 }

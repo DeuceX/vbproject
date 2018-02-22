@@ -4,13 +4,13 @@ using System.Text;
 
 namespace DAL.Interfaces
 {
-    public interface IRepository<T> where T: class
+    public interface IRepository<T> where T : class
     {
         IEnumerable<T> GetAll();
-        T Get(int id);
-        IEnumerable<T> Find(Func<T, Boolean> predicate);
-        void Create(T item);
-        void Update(T item);
-        void Delete(int id);
+        void Insert(T entity);
+        void Update(T entity);
+        void Delete(T entity);
+        void Remove(T entity);
+        void SaveChanges();
     }
 }

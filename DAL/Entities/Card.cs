@@ -9,6 +9,6 @@ namespace DAL.Entities
         public string Name { get; set; }
         public string Description { get; set; }
         public string Img { get; set; }
-        public List<string> Types { get; set; }
+        public string Type { get; set; }
     }
 }

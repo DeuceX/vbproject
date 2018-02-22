@@ -1,27 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
+﻿using Microsoft.EntityFrameworkCore;
 using DAL.Entities;
-using System.Text;
 
 namespace DAL.EF
 {
     public class CardContext : DbContext
     {
         public DbSet<Card> Cards { get; set; }
-
-        static CardContext()
-        {
-            Database.SetInitializer<CardContext>(new StoreDbInitializer());
-        }
-        public CardContext(string connectionString)
-            : base(connectionString)
+        
+        public CardContext(DbContextOptions<CardContext> options)
+            : base(options)
         {
         }
 
-        public class StoreDbInitializer : DropCreateDatabaseIfModelChanges<CardContext>
+        public class StoreDbInitializer
         {
-            protected override void Seed(CardContext db)
+            protected void Seed(CardContext db)
             {
                 db.Cards.Add(new Card { Id = 1, Name = "Card 1", Description = "Card 1 description "});
                 db.Cards.Add(new Card { Id = 2, Name = "Card 2", Description = "Card 2 description " });

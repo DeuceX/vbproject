@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using DAL.EF;
 using DAL.Entities;
 using DAL.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace DAL.Repositories
 {
@@ -22,6 +22,11 @@ namespace DAL.Repositories
             return _context.Cards;
         }
 
+        public void Insert(Card entity)
+        {
+            throw new NotImplementedException();
+        }
+
         public Card Get(int id)
         {
             return _context.Cards.FirstOrDefault(c => c.Id == id);
@@ -35,18 +40,28 @@ namespace DAL.Repositories
         public void Create(Card card)
         {
             _context.Cards.Add(card);
+            _context.SaveChanges();
         }
 
         public void Update(Card card)
         {
             _context.Entry(card).State = EntityState.Modified;
+            _context.SaveChanges();
         }
 
-        public void Delete(int id)
+        public void Delete(Card entity)
         {
-            Card book = _context.Cards.Find(id);
-            if (book != null)
-                _context.Cards.Remove(book);
+            _context.Cards.Remove(entity);
+        }
+
+        public void Remove(Card entity)
+        {
+            _context.Cards.Remove(entity);
+        }
+
+        public void SaveChanges()
+        {
+            _context.SaveChanges();
         }
     }
 }

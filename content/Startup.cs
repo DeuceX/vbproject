@@ -1,8 +1,13 @@
 using BLL.Services;
 using BLL.Services.Interfaces;
+using DAL.EF;
+using DAL.Interfaces;
+using DAL.Repositories;
+using DAL.Repositories.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.Webpack;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -27,8 +32,12 @@ namespace Vue2Spa
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
-            services.AddSingleton<ICardService, CardService>();
             services.AddMvc();
+            services.AddScoped<ICardService, CardService>();
+            services.AddScoped<ICardRepository, CardRepository>();
+            services.AddScoped<ICardSetRepository, CardSetRepository>();
+            services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(@"Data Source=.;Initial Catalog=try.db;Trusted_Connection=True;"));
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

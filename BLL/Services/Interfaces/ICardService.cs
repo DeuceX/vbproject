@@ -6,7 +6,7 @@ namespace BLL.Services.Interfaces
 {
     public interface ICardService
     {
-        IEnumerable<CardDTO> GetAll();
+        IEnumerable<Card> GetAll();
         CardDTO GetById(int id);
         void Delete(int id);
         void Update(Card card);
