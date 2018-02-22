@@ -1,0 +1,11 @@
+C:\deals\BLL\bin\Debug\netcoreapp2.0\DAL.dll
+C:\deals\BLL\obj\Debug\netcoreapp2.0\BLL.csprojResolveAssemblyReference.cache
+C:\deals\BLL\obj\Debug\netcoreapp2.0\BLL.csproj.CoreCompileInputs.cache
+C:\deals\BLL\obj\Debug\netcoreapp2.0\BLL.AssemblyInfoInputs.cache
+C:\deals\BLL\obj\Debug\netcoreapp2.0\BLL.AssemblyInfo.cs
+C:\deals\BLL\bin\Debug\netcoreapp2.0\BLL.deps.json
+C:\deals\BLL\bin\Debug\netcoreapp2.0\BLL.dll
+C:\deals\BLL\bin\Debug\netcoreapp2.0\BLL.pdb
+C:\deals\BLL\bin\Debug\netcoreapp2.0\DAL.pdb
+C:\deals\BLL\obj\Debug\netcoreapp2.0\BLL.dll
+C:\deals\BLL\obj\Debug\netcoreapp2.0\BLL.pdb
