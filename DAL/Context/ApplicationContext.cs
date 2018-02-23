@@ -6,7 +6,7 @@ namespace DAL.Context
 {
     public class ApplicationContext : DbContext
     {
-        public DbSet<Card> Cards { get; set; }
+        public DbSet<Card> Card { get; set; }
         public DbSet<CardSet> CardSets { get; set; }
 
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
