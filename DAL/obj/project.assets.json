@@ -3393,7 +3393,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lera\\.nuget\\packages\\": {},
+    "C:\\Users\\dbraga\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -3402,17 +3402,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\www\\cases\\vbproject\\DAL\\DAL.csproj",
+      "projectUniqueName": "C:\\deals\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "C:\\www\\cases\\vbproject\\DAL\\DAL.csproj",
-      "packagesPath": "C:\\Users\\Lera\\.nuget\\packages\\",
-      "outputPath": "C:\\www\\cases\\vbproject\\DAL\\obj\\",
+      "projectPath": "C:\\deals\\DAL\\DAL.csproj",
+      "packagesPath": "C:\\Users\\dbraga\\.nuget\\packages\\",
+      "outputPath": "C:\\deals\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Lera\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dbraga\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3438,21 +3438,21 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
-            "version": "[2.0.1, )"
-          },
-          "Microsoft.EntityFrameworkCore.SqlServer": {
-            "target": "Package",
-            "version": "[2.0.1, )"
+            "version": "2.0.1"
           },
           "Microsoft.EntityFrameworkCore.Tools": {
             "target": "Package",
-            "version": "[2.0.1, )"
+            "version": "2.0.1"
           },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.0.0, )",
+            "version": "2.0",
             "autoReferenced": true
+          },
+          "Microsoft.EntityFrameworkCore.SqlServer": {
+            "target": "Package",
+            "version": "2.0.1"
           }
         },
         "imports": [
