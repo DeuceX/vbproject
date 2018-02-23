@@ -11,7 +11,7 @@
         <h4>{{ card.description }}</h4>
         <router-link :to="'/card-details/' + card.id">
           <div class="cards__img">
-            <img :src="'/ClientApp/main/assets/data/card.png'" alt="card" width="280" height="200" />
+            <img src="./../../assets/data/card.png" alt="card" width="280" height="200" />
           </div>
         </router-link>
       </div>
