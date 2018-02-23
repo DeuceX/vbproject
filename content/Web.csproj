@@ -23,6 +23,12 @@
     <Folder Include="ClientApp\main\pages\home\components\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="wwwroot\dist\89889688147bd7575d6327160d64e760.svg" />
+    <None Include="wwwroot\dist\main.js" />
+    <None Include="wwwroot\dist\main.js.map" />
+    <None Include="wwwroot\dist\vendor.js" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj" />
   </ItemGroup>
   <Target Name="RunWebpack" AfterTargets="ComputeFilesToPublish">

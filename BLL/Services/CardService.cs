@@ -27,7 +27,7 @@ namespace BLL.Services
 
         public void Delete(int id)
         {
-            cardRepository.Delete(cardRepository.GetAll().FirstOrDefault(c => c.Id == id));
+            cardRepository.Delete(GetById(id));
         }
 
         public void Update(Card card)

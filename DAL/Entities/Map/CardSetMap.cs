@@ -2,13 +2,13 @@
 
 namespace DAL.Entities.Map
 {
-    public class CardMap
+    class CardSetMap
     {
-        public CardMap(EntityTypeBuilder<Card> entityBuilder)
+        public CardSetMap(EntityTypeBuilder<CardSet> entityBuilder)
         {
             entityBuilder.HasKey(t => t.Id);
             entityBuilder.Property(t => t.Name).IsRequired();
+            entityBuilder.Property(t => t.Price).IsRequired();
         }
-
     }
 }

@@ -32,9 +32,12 @@ namespace Vue2Spa
         {
             // Add framework services.
             services.AddMvc();
+
             services.AddScoped<ICardService, CardService>();
-            services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:LocalDb"]));
+            services.AddScoped<ICardSetService, CardSetService>();
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+
+            services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:LocalDb"]));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

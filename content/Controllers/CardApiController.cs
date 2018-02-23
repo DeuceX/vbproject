@@ -1,6 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
-using BLL.Dto;
 using Microsoft.AspNetCore.Mvc;
 using BLL.Services.Interfaces;
 using DAL.Entities;
@@ -8,11 +6,11 @@ using DAL.Entities;
 namespace Web.Controllers
 {
     [Route("api/[controller]")]
-    public class CardController : Controller
+    public class CardApiController : Controller
     {
         private ICardService cardService;
 
-        public CardController(ICardService cardService)
+        public CardApiController(ICardService cardService)
         {
             this.cardService = cardService;
         }
