@@ -1,9 +1,20 @@
 .header {
-  padding: 10px 0;
   position: relative;
+  padding: 10px 0;
+  &--main {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: flex-end;
+  }
   &__wrap {
     align-items: center;
     justify-content: space-between;
+    &--main {
+      justify-content: center;
+      width: 50%;
+    }
   }
   &__logo {
     position: relative;
@@ -17,8 +28,6 @@
       color: $main-hover;
       transition: color .3s;
     }
-  }
-  &__nav {
   }
   &__list {
     @extend %clear-list;

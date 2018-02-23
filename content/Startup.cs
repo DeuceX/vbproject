@@ -33,7 +33,7 @@ namespace Vue2Spa
             // Add framework services.
             services.AddMvc();
             services.AddScoped<ICardService, CardService>();
-            services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(@"Data Source=.;Initial Catalog=try.db;Trusted_Connection=True;"));
+            services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:LocalDb"]));
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
         }
 

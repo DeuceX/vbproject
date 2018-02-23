@@ -3398,9 +3398,6 @@
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
       "projectUniqueName": "C:\\www\\cases\\vbproject\\DAL\\DAL.csproj",
       "projectName": "DAL",

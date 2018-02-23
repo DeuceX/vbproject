@@ -1,5 +1,10 @@
 <template>
-  <header class="header">
+  <header class="header--main flex-row" v-if="$route.path==='/'">
+    <!-- <div class="header__wrap--main flex-row">
+      <div class="header__logo">try <span>it yourself</span></div>
+    </div> -->
+  </header>
+  <header class="header" v-else>
     <div class="align header__wrap flex-row">
       <router-link :to="'/'" class="header__logo">
         try

@@ -1,8 +1,27 @@
 .main {
   height: 100%;
   width: 100%;
-  background-image: url('../data/main-bg.png');
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: 50% 100%;
+  &__parallax,
+  &__form {
+    width: 50%;
+    height: 100%;
+  }
+  &__parallax {
+    background-color: $main;
+    // &--1,
+    // &--2 {
+    //   background-repeat: no-repeat;
+    // }
+    // &--1 {
+
+    // }
+  }
+  &__form {
+    align-items: center;
+    justify-content: center;
+    .header__logo {
+      width: 100%;
+      text-align: center;
+    }
+  }
 }
