@@ -18,6 +18,7 @@
     </div>
   </div>
 </template>
+
 <script>
   import AccountInfo from './components/account-info';
 

@@ -4458,7 +4458,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dbraga\\.nuget\\packages\\": {},
+    "C:\\Users\\Lera\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -4467,17 +4467,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\deals\\BLL\\BLL.csproj",
+      "projectUniqueName": "C:\\www\\cases\\vbproject\\BLL\\BLL.csproj",
       "projectName": "BLL",
-      "projectPath": "C:\\deals\\BLL\\BLL.csproj",
-      "packagesPath": "C:\\Users\\dbraga\\.nuget\\packages\\",
-      "outputPath": "C:\\deals\\BLL\\obj\\",
+      "projectPath": "C:\\www\\cases\\vbproject\\BLL\\BLL.csproj",
+      "packagesPath": "C:\\Users\\Lera\\.nuget\\packages\\",
+      "outputPath": "C:\\www\\cases\\vbproject\\BLL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\dbraga\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Lera\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4490,8 +4490,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\deals\\DAL\\DAL.csproj": {
-              "projectPath": "C:\\deals\\DAL\\DAL.csproj"
+            "C:\\www\\cases\\vbproject\\DAL\\DAL.csproj": {
+              "projectPath": "C:\\www\\cases\\vbproject\\DAL\\DAL.csproj"
             }
           }
         }
@@ -4505,15 +4505,15 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
+          "AutoMapper": {
+            "target": "Package",
+            "version": "[6.2.2, )"
+          },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.0",
+            "version": "[2.0.0, )",
             "autoReferenced": true
-          },
-          "AutoMapper": {
-            "target": "Package",
-            "version": "6.2.2"
           }
         },
         "imports": [

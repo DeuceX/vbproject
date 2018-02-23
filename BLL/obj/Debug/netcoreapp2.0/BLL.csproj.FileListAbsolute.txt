@@ -11,3 +11,12 @@ C:\deals\BLL\obj\Debug\netcoreapp2.0\BLL.dll
 C:\deals\BLL\obj\Debug\netcoreapp2.0\BLL.pdb
 C:\www\cases\vbproject\BLL\obj\Debug\netcoreapp2.0\BLL.dll
 C:\www\cases\vbproject\BLL\obj\Debug\netcoreapp2.0\BLL.pdb
+C:\www\cases\vbproject\BLL\bin\Debug\netcoreapp2.0\BLL.deps.json
+C:\www\cases\vbproject\BLL\bin\Debug\netcoreapp2.0\BLL.dll
+C:\www\cases\vbproject\BLL\bin\Debug\netcoreapp2.0\BLL.pdb
+C:\www\cases\vbproject\BLL\bin\Debug\netcoreapp2.0\DAL.dll
+C:\www\cases\vbproject\BLL\bin\Debug\netcoreapp2.0\DAL.pdb
+C:\www\cases\vbproject\BLL\obj\Debug\netcoreapp2.0\BLL.csprojResolveAssemblyReference.cache
+C:\www\cases\vbproject\BLL\obj\Debug\netcoreapp2.0\BLL.csproj.CoreCompileInputs.cache
+C:\www\cases\vbproject\BLL\obj\Debug\netcoreapp2.0\BLL.AssemblyInfoInputs.cache
+C:\www\cases\vbproject\BLL\obj\Debug\netcoreapp2.0\BLL.AssemblyInfo.cs
