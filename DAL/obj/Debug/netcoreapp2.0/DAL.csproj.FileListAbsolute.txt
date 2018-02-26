@@ -16,3 +16,5 @@ C:\www\cases\vbproject\DAL\obj\Debug\netcoreapp2.0\DAL.AssemblyInfoInputs.cache
 C:\www\cases\vbproject\DAL\obj\Debug\netcoreapp2.0\DAL.AssemblyInfo.cs
 C:\www\cases\vbproject\DAL\obj\Debug\netcoreapp2.0\DAL.dll
 C:\www\cases\vbproject\DAL\obj\Debug\netcoreapp2.0\DAL.pdb
+C:\deals\DAL\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\deals\DAL\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml

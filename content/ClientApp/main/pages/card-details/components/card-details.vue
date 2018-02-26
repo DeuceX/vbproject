@@ -43,7 +43,7 @@
 
         async created() {
             try {
-                let response = await this.$http.get('/api/Card/Get/' + this.id);
+                let response = await this.$http.get('/api/CardApi/Get/' + this.id);
                 this.card = response.data;
             } catch (error) {
                 console.log(error)

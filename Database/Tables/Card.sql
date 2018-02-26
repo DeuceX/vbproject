@@ -7,6 +7,7 @@ DROP TABLE [Card];
 CREATE TABLE [Card] (
 	Id int primary key identity(1,1),
 	CardSetId int not null,
+	foreign key (CardSetId) references CardSet(Id),
 	[Name] nvarchar(50) not null,
 	[Description] nvarchar(250),
 	ImageUrl nvarchar(250),

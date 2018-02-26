@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "95234848c566c49302e2576bc7d5008119140182"
+    "signature": "be53a1f87662bfe270ebcc892ea01e12d2a8be95"
   },
   "compilationOptions": {},
   "targets": {
@@ -30,6 +30,26 @@
         },
         "runtime": {
           "lib/netstandard1.3/AutoMapper.dll": {}
+        }
+      },
+      "EntityFramework/6.1.0": {
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        }
+      },
+      "Microsoft.AspNet.Identity.Core/2.2.1": {
+        "runtime": {
+          "lib/net45/Microsoft.AspNet.Identity.Core.dll": {}
+        }
+      },
+      "Microsoft.AspNet.Identity.EntityFramework/2.2.1": {
+        "dependencies": {
+          "EntityFramework": "6.1.0",
+          "Microsoft.AspNet.Identity.Core": "2.2.1"
+        },
+        "runtime": {
+          "lib/net45/Microsoft.AspNet.Identity.EntityFramework.dll": {}
         }
       },
       "Microsoft.CSharp/4.4.0": {},
@@ -591,6 +611,7 @@
       },
       "DAL/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNet.Identity.EntityFramework": "2.2.1",
           "Microsoft.EntityFrameworkCore": "2.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.0.1",
           "Microsoft.EntityFrameworkCore.Tools": "2.0.1"
@@ -613,6 +634,27 @@
       "sha512": "sha512-eGKcnJdoF5rYMWPUaSPtlWdvua9xw4hnQN5kM/X4AXLGKghrtPIaMv+RYoA3sj0kyZ3X6wZ1Qj67F+u0pCCPaw==",
       "path": "automapper/6.2.2",
       "hashPath": "automapper.6.2.2.nupkg.sha512"
+    },
+    "EntityFramework/6.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-u/M0OEfqxTUsL5BwzD66eBGm278/ozqdLK3JvMO6QwUxxc+z7ZUkTYm4suDhWRqzkc6mOhvXDQY5dZUwbldxyQ==",
+      "path": "entityframework/6.1.0",
+      "hashPath": "entityframework.6.1.0.nupkg.sha512"
+    },
+    "Microsoft.AspNet.Identity.Core/2.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jjurNglpmcv0SLBd4Fmar8ZoJ2yqfTf6iuP3p8wVH7Nvanfo8l3qTBzq3qRQz2BQlb6iXJiDWPjcnIImVz512g==",
+      "path": "microsoft.aspnet.identity.core/2.2.1",
+      "hashPath": "microsoft.aspnet.identity.core.2.2.1.nupkg.sha512"
+    },
+    "Microsoft.AspNet.Identity.EntityFramework/2.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-g3tCS3vZ+hPjqrGrkq2hpl2Wc5Ltaj+kInZM80uENHldTHmrvCpVXvTXcvTt7HU3vupjmYFfNWVFRWCypNZgug==",
+      "path": "microsoft.aspnet.identity.entityframework/2.2.1",
+      "hashPath": "microsoft.aspnet.identity.entityframework.2.2.1.nupkg.sha512"
     },
     "Microsoft.CSharp/4.4.0": {
       "type": "package",

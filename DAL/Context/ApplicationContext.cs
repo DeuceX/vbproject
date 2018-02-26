@@ -1,5 +1,6 @@
 ﻿using DAL.Entities;
 using DAL.Entities.Map;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace DAL.Context
@@ -17,6 +18,7 @@ namespace DAL.Context
         {
             base.OnModelCreating(modelBuilder);
             new CardMap(modelBuilder.Entity<Card>());
+            new CardSetMap(modelBuilder.Entity<CardSet>());
         }
 
     }
