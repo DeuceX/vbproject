@@ -8,6 +8,9 @@
     left: 0;
     justify-content: flex-end;
   }
+  .mainpage & {
+    display: none;
+  }
   &__wrap {
     align-items: center;
     justify-content: space-between;
@@ -24,6 +27,9 @@
     font-size: 62px;
     line-height: 1.5;
     text-decoration: none;
+  }
+  a.header__logo {
+    transition: color .3s;
     @include hover() {
       color: $main-hover;
       transition: color .3s;

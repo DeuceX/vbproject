@@ -25,7 +25,7 @@
   export default {
     data() {
       return {
-          cards: null
+        cards: null
       }
     },
     components: {
