@@ -1,11 +1,13 @@
 <template>
   <div class="main flex-row">
-    <div id="scene" class="main__parallax">
-      <div class="main__parallax--1"><img src="/ClientApp/main/assets/data/1.png"></div>
-      <div class="main__parallax--2"><img src="/ClientApp/main/assets/data/2.png"></div>
-      <div class="main__parallax--3"><img src="/ClientApp/main/assets/data/3.png"></div>
+    <div class="main__parallax">
+      <div id="scene">
+        <div class='stars stars--1' data-depth="0.4"></div>
+        <div class='stars stars--2' data-depth="0.2"></div>
+        <div class='stars stars--3' data-depth="0.6"></div>
+      </div>
     </div>
-    <div class="main__form flex-col">
+    <div class="main__form">
       <div class="main__form-top">
         <div class="header__logo">try it yourself</div>
         <div class="main__separator">or</div>
@@ -27,7 +29,11 @@
       return {}
     }
   }
-  // import Parallax from 'parallax-js/dist/parallax.min';
-  // var scene = document.getElementById('scene');
-  // var parallaxInstance = new Parallax(scene);
+  import Parallax from 'parallax-js/dist/parallax';
+  window.onload = function() {
+    var scene = document.getElementById('scene');
+    var parallaxInstance = new Parallax(scene, {
+      relativeInput: true
+    });
+  }
 </script>
