@@ -32,6 +32,9 @@ Bin/
 obj/
 Obj/
 DAL/bin
+DAL/obj
+BLL/bin
+BLL/obj
 
 # Visual Studio 2015 cache/options directory
 .vs/
