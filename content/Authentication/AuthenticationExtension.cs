@@ -11,7 +11,7 @@ namespace Web.Authentication
     {
         public static IServiceCollection AddIdentityAuthorization(this IServiceCollection services)
         {
-            services.AddIdentity<User, IdentityRole>(o =>
+            services.AddIdentity<Customer, IdentityRole>(o =>
                 {
                     o.Password.RequireDigit = false;
                     o.Password.RequireLowercase = false;

@@ -15,7 +15,7 @@ namespace DAL.Repositories
 
         public ICardRepository CardRepository { get; set; }
         public ICardSetRepository CardSetRepository { get; set; }
-        public IUserRepository UserRepository { get; set; }
+        public ICustomerRepository CustomerRepository { get; set; }
 
         public void Commit()
         {
