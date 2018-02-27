@@ -5,7 +5,7 @@
 
         ICardRepository CardRepository { get; set; }
         ICardSetRepository CardSetRepository { get; set; }
-        IUserRepository UserRepository { get; set; }
+        ICustomerRepository CustomerRepository { get; set; }
 
         void Commit();
     }
