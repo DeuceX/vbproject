@@ -18,13 +18,14 @@
     </div>
   </div>
 </template>
+
 <script>
   import AccountInfo from './components/account-info';
 
   export default {
     data() {
       return {
-          cards: null
+        cards: null
       }
     },
     components: {

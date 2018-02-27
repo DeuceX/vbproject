@@ -1,0 +1,64 @@
+.settings {
+  &__nav {
+    flex: 0 0 auto;
+    width: 240px;
+    border-right: 1px solid $border;
+  }
+  &__content {
+    flex: 1 0 0%;
+    padding: 15px 40px;
+  }
+  &__link {
+    display: block;
+    padding: 12px 18px 12px 0;
+    font-size: 22px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    position: relative;
+    color: $main;
+    transition: color .3s;
+    span {
+      position: relative;
+      &::before {
+        @extend %pseudo;
+        background-color: $main-hover;
+        width: 0;
+        height: 1px;
+        top: 100%;
+        left: 0;
+        transition: width .3s;
+      }
+    }
+    &.active {
+      span::before  {
+        width: 100%;
+        background-color: $main;
+      }
+    }
+    @include hover() {
+      color: $main-hover;
+      span::before {
+        width: 100%;
+      }
+    }
+  }
+  &__change {
+    flex: 0 0 auto;
+    width: 60%;
+  }
+  &__avatar {
+    flex: 1 0 0%;
+    align-items: center;
+  }
+  &__img {
+    background-color: $main;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    img {
+      width: 100%;
+    }
+  }
+}

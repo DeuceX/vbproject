@@ -1,0 +1,53 @@
+.account-info {
+  padding: 40px 0;
+  &__left {
+    margin-right: 5%;
+    flex: 0 0 150px;
+  }
+  &__img {
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: $main;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+    img {
+      width: 100%;
+    }
+  }
+  &__cases {
+    text-align: center;
+    font-size: 12px;
+    line-height: 1;
+    b {
+      font-size: 16px;
+    }
+  }
+  &__right {
+    justify-content: space-between;
+    flex: 1 0 0%;
+  }
+  &__description {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  &__name {
+    font-weight: 700;
+    font-size: 20px;
+  }
+  &__nick {
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  &__settings {
+    align-items: center;
+    a {
+      padding: 0;
+      margin-right: 15px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

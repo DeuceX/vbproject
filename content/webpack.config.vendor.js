@@ -19,7 +19,7 @@ module.exports = (env) => {
             ]
         },
         entry: {
-            vendor: ['event-source-polyfill', 'vue', 'vuex', 'axios', 'vue-router', 'jquery'],
+            vendor: ['event-source-polyfill', 'vue', 'vuex', 'axios', 'vue-router', 'jquery', "parallax-js"],
         },
         output: {
             path: path.join(__dirname, 'wwwroot', 'dist'),
