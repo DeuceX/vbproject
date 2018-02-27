@@ -10,6 +10,7 @@ namespace Web.Modules
         {
             builder.RegisterType<CardService>().As<ICardService>().PropertiesAutowired();
             builder.RegisterType<CardSetService>().As<ICardSetService>();
+            builder.RegisterType<CustomerService>().As<ICustomerService>();
         }
     }
 }

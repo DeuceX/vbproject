@@ -18,6 +18,7 @@ namespace Web.Modules
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().PropertiesAutowired();
             builder.RegisterType<CardRepository>().As<ICardRepository>();
             builder.RegisterType<CardSetRepository>().As<ICardSetRepository>();
+            builder.RegisterType<CustomerRepository>().As<ICustomerRepository>();
         }
     }
 }
