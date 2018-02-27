@@ -21,7 +21,7 @@ namespace Web.Autofac
         public void RegisterModules(IEnumerable<AssemblyName> assemblyNames)
         {
             var assemblies = assemblyNames
-                .Where(name => name.Name.StartsWith("GSP"))
+                .Where(name => name.Name.StartsWith(String.Empty))
                 .Distinct()
                 .Select(Assembly.Load);
 

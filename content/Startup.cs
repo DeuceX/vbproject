@@ -43,10 +43,6 @@ namespace Vue2Spa
                     = new DefaultContractResolver();
             });
 
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
-            services.AddScoped<ICardService, CardService>();
-            services.AddScoped<ICardSetService, CardSetService>();
-
             services.AddAutofac();
         }
 

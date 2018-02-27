@@ -8,7 +8,7 @@ namespace Web.Modules
     {
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterType<CardService>().As<ICardService>();
+            builder.RegisterType<CardService>().As<ICardService>().PropertiesAutowired();
             builder.RegisterType<CardSetService>().As<ICardSetService>();
         }
     }
