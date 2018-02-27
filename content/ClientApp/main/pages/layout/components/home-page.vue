@@ -11,7 +11,7 @@
       <div class="main__form-top">
         <div class="header__logo">try it yourself</div>
         <div class="main__separator">or</div>
-        <a href="#" class="main__login">login</a>
+        <div class="main__login" v-on:click="login">login</div>
       </div>
       <form class="form form-btn-right">
         <div class="form__item"><input type="text" placeholder="Name Surname"></div>
@@ -21,12 +21,31 @@
         <button class="form__btn">Go</button>
       </form>
     </div>
+
+    <!-- <div class="main__form">
+      <div class="main__form-top">
+        <div class="header__logo">Login</div>
+        <div class="main__separator">or</div>
+        <div class="main__login">try it now</div>
+      </div>
+      <form class="form form-btn-right">
+        <div class="form__item"><input type="email" placeholder="Email"></div>
+        <div class="form__item"><input type="password" placeholder="Password"></div>
+        <button class="form__btn">Go</button>
+      </form>
+    </div> -->
+
   </div>
 </template>
 <script>
   export default {
     data() {
       return {}
+    },
+    methods: {
+      login: function () {
+        this.classList.toggle('active');
+      }
     }
   }
   import Parallax from 'parallax-js/dist/parallax';

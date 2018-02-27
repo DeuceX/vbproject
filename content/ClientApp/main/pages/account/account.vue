@@ -33,9 +33,9 @@
     },
     async created() {
       try {
-          let response = await this.$http.get('/api/CardApi/GetAll');
-          this.cards = response.data;
-          console.log(this.cards);
+        let response = await this.$http.get('/api/CardApi/GetAll');
+        this.cards = response.data;
+        console.log(this.cards);
       } catch (error) {
           console.log(error)
       }

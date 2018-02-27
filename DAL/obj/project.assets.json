@@ -3825,26 +3825,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dbraga\\.nuget\\packages\\": {},
+    "C:\\Users\\Lera\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "C:\\deals\\DAL\\DAL.csproj",
+      "projectUniqueName": "C:\\www\\cases\\vbproject\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "C:\\deals\\DAL\\DAL.csproj",
-      "packagesPath": "C:\\Users\\dbraga\\.nuget\\packages\\",
-      "outputPath": "C:\\deals\\DAL\\obj\\",
+      "projectPath": "C:\\www\\cases\\vbproject\\DAL\\DAL.csproj",
+      "packagesPath": "C:\\Users\\Lera\\.nuget\\packages\\",
+      "outputPath": "C:\\www\\cases\\vbproject\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\dbraga\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Lera\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3857,8 +3854,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\deals\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\deals\\Domain\\Domain.csproj"
+            "C:\\www\\cases\\vbproject\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\www\\cases\\vbproject\\Domain\\Domain.csproj"
             }
           }
         }
@@ -3872,35 +3869,35 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
+          "LinqKit.Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[1.1.15, )"
+          },
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
             "target": "Package",
-            "version": "2.0.1"
+            "version": "[2.0.1, )"
           },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
-            "version": "2.0.1"
+            "version": "[2.0.1, )"
+          },
+          "Microsoft.EntityFrameworkCore.Relational": {
+            "target": "Package",
+            "version": "[2.0.1, )"
           },
           "Microsoft.Extensions.Identity.Stores": {
             "target": "Package",
-            "version": "2.0.1"
+            "version": "[2.0.1, )"
           },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.0",
+            "version": "[2.0.0, )",
             "autoReferenced": true
-          },
-          "LinqKit.Microsoft.EntityFrameworkCore": {
-            "target": "Package",
-            "version": "1.1.15"
-          },
-          "Microsoft.EntityFrameworkCore.Relational": {
-            "target": "Package",
-            "version": "2.0.1"
           },
           "Newtonsoft.Json": {
             "target": "Package",
-            "version": "11.0.1"
+            "version": "[11.0.1, )"
           }
         },
         "imports": [

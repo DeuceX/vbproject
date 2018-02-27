@@ -17,6 +17,7 @@
     position: relative;
     color: $main;
     transition: color .3s;
+    cursor: pointer;
     span {
       position: relative;
       &::before {

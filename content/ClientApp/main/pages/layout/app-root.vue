@@ -13,7 +13,7 @@
   import AccountPage from '../account/account'
   import SettingsPage from '../settings/settings'  
 
-  Vue.component('home-page', HomePage);
+  Vue.component('home-page', HomePage);  
   Vue.component('account', AccountPage);  
   Vue.component('my-header', header);
   Vue.component('settings', SettingsPage);

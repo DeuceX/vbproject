@@ -18,3 +18,5 @@ C:\www\cases\vbproject\DAL\obj\Debug\netcoreapp2.0\DAL.dll
 C:\www\cases\vbproject\DAL\obj\Debug\netcoreapp2.0\DAL.pdb
 C:\deals\DAL\bin\Debug\netcoreapp2.0\Domain.dll
 C:\deals\DAL\bin\Debug\netcoreapp2.0\Domain.pdb
+C:\www\cases\vbproject\DAL\bin\Debug\netcoreapp2.0\Domain.dll
+C:\www\cases\vbproject\DAL\bin\Debug\netcoreapp2.0\Domain.pdb
