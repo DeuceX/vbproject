@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Newtonsoft.Json;
 
-namespace DAL.Entities
+namespace Domain.Card
 {
+    [JsonObject(IsReference = true)]
     public class CardSet
     {
         public int Id { get; set; }

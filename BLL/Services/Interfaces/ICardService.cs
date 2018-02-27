@@ -1,13 +1,15 @@
 ﻿using System.Collections.Generic;
-using DAL.Entities;
+using BLL.Dto;
+using Domain.Card;
 
 namespace BLL.Services.Interfaces
 {
     public interface ICardService
     {
-        IEnumerable<Card> GetAll();
-        Card GetById(int id);
+        IEnumerable<CardDto> GetAll();
+        CardDto GetById(int id);
         void Delete(int id);
         void Update(Card card);
+        void Add(CardDto card);
     }
 }

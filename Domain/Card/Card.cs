@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
 
-namespace DAL.Entities
+namespace Domain.Card
 {
+    [JsonObject(IsReference = true)]
     public class Card
     {
         public int Id { get; set; }
@@ -10,5 +11,6 @@ namespace DAL.Entities
         public string Description { get; set; }
         public string ImageUrl { get; set; }
         public string Type { get; set; }
+        public virtual CardSet CardSet { get; set; }
     }
 }

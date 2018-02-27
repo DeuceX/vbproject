@@ -1,15 +1,17 @@
+using BLL.Map;
 using BLL.Services;
 using BLL.Services.Interfaces;
-using DAL.Context;
 using DAL.Repositories;
 using DAL.Repositories.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.Webpack;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json.Serialization;
+using Web.Authentication;
+using Web.Autofac;
 
 namespace Vue2Spa
 {
@@ -31,13 +33,21 @@ namespace Vue2Spa
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
-            services.AddMvc();
+            services.AddIdentityAuthorization();
 
+            services.AddCors();
+
+            services.AddMvc().AddJsonOptions(options =>
+            {
+                options.SerializerSettings.ContractResolver
+                    = new DefaultContractResolver();
+            });
+
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<ICardService, CardService>();
             services.AddScoped<ICardSetService, CardSetService>();
-            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
-            services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:LocalDb"]));
+            services.AddAutofac();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,7 +69,10 @@ namespace Vue2Spa
                 app.UseExceptionHandler("/Home/Error");
             }
 
+            app.UseCors(options => options.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
             app.UseStaticFiles();
+            app.UseAuthentication();
+            app.UseAutofac(Configuration);
 
             app.UseMvc(routes =>
             {
@@ -71,6 +84,8 @@ namespace Vue2Spa
                     name: "spa-fallback",
                     defaults: new { controller = "Home", action = "Index" });
             });
+
+            AutoMapperConfig.Init();
         }
     }
 }

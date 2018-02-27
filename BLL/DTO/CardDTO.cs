@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Domain.Card;
 
 namespace BLL.Dto
 {
@@ -11,6 +9,7 @@ namespace BLL.Dto
         public string Name { get; set; }
         public string Description { get; set; }
         public string ImageUrl { get; set; }
-        public List<string> Types { get; set; }
+        public string Type { get; set; }
+        public virtual CardSet CardSet { get; set; }
     }
 }

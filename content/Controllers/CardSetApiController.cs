@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using BLL.Services.Interfaces;
-using DAL.Entities;
+using Domain.Card;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Web.Controllers

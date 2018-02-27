@@ -1,38 +1,50 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using BLL.Dto;
 using BLL.Services.Interfaces;
-using DAL.Entities;
+using DAL.Repositories;
 using DAL.Repositories.Interfaces;
+using Domain.Card;
 
 namespace BLL.Services
 {
     public class CardService : ICardService
     {
-        private IRepository<Card> cardRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public CardService(IRepository<Card> cardRepository)
+        public CardService(IUnitOfWork unitOfWork)
         {
-            this.cardRepository = cardRepository;
+            _unitOfWork = unitOfWork;
         }
 
-        public IEnumerable<Card> GetAll()
+        public void Add(CardDto card)
         {
-            return cardRepository.GetAll();
+            var newCategory = AutoMapper.Mapper.Map<CardDto, Card>(card);
+            _unitOfWork.CardRepository.Insert(newCategory);
+            _unitOfWork.Commit();
         }
 
-        public Card GetById(int id)
+        public CardDto GetById(int id)
         {
-            return cardRepository.GetAll().FirstOrDefault(c => c.Id == id);
+            var card = _unitOfWork.CardRepository.GetById(id);
+            return AutoMapper.Mapper.Map<Card, CardDto>(card);
         }
+
+        public IEnumerable<CardDto> GetAll()
+        {
+            var cards = _unitOfWork.CardRepository.GetAll();
+            return AutoMapper.Mapper.Map<IEnumerable<Card>, List<CardDto>>(cards);
+        }
+
 
         public void Delete(int id)
         {
-            cardRepository.Delete(GetById(id));
+            //cardRepository.Delete(GetById(id));
         }
 
         public void Update(Card card)
         {
-            cardRepository.Update(card);
+            //cardRepository.Update(card);
         }
     }
 }

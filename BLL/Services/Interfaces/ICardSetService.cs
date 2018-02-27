@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using DAL.Entities;
+using Domain.Card;
 
 namespace BLL.Services.Interfaces
 {
