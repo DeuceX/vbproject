@@ -4,20 +4,11 @@
       <div 
         class="settings__link" 
         v-for="(tab, tabIndex) in tabs"
-        v-on:click="activeTab(tabIndex)"
-        :class="{ active: (tabIndex == index) ? true : false }"> 
-        {{ tab.name }} {{ tabIndex }}
+        v-on:click="index = tabIndex"
+        :key="tabIndex"
+        :class="(tabIndex == index) ? 'active' : ''"> 
+        {{ tab.name }}
       </div>
-      <!-- <router-link 
-        :to="'/account/settings/edit'"
-        class="settings__link active">
-        <span>Edit profile</span>
-      </router-link>
-      <router-link 
-        :to="'/account/settings/password'" 
-        class="settings__link">
-        <span>Change password</span>
-      </router-link> -->
       <router-link 
         :to="'#'" 
         class="settings__link">
@@ -26,10 +17,10 @@
     </div>
     <div 
       class="settings__content"
-      v-for="tab in tabs">
-      {{ tab.content }}
-      <!-- <edit-profile></edit-profile> -->
-      <!-- <change-pass></change-pass> -->
+      v-for="(tab, tabIndex) in tabs"
+      :class="(tabIndex == index) ? 'active' : ''"
+      :key="tabIndex + 10">
+      <component :is="tabs[tabIndex].content"></component>
     </div>
   </div>
 </template>
@@ -46,12 +37,12 @@
           {
             tabIndex: 0,
             name: 'Edit profile',
-            content: '123'
+            content: 'edit-profile'
           },
           {
             tabIndex: 1,
             name: 'Change password',
-            content: '321'
+            content: 'change-pass'
           }
         ]
       }
@@ -59,11 +50,6 @@
     components: {
       editProfile: EditProfile,
       changePass: ChangePass
-    },
-    methods: {
-      activeTab: function(tab) {
-        this.index == tabIndex
-      }
     }
   }
 </script>

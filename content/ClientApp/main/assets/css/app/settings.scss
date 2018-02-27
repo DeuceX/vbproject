@@ -7,6 +7,10 @@
   &__content {
     flex: 1 0 0%;
     padding: 15px 40px;
+    display: none;
+    &.active {
+      display: block;
+    }
   }
   &__link {
     display: block;
